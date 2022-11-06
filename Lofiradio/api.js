@@ -67,7 +67,7 @@ if (audioPlayer && audioPlayer.dataset.src) {
         e.paused ? setPlayStatus() : setPauseStatus()
     }), !1)
 }
-const boxplay = "https://exclusive.streamafrica.net/api/nowplaying/48";
+const boxplay = "https://api.streamafrica.net/nowplaying/lofi";
 
 function playerInit() {
     fetch(boxplay).then((e => e.json())).then((e => {
@@ -77,24 +77,24 @@ function playerInit() {
             n = $(".song-next", player),
             l = e.now_playing.remaining,
             s = $(".player-poster");
-        s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.song.art), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.song), n && setPlayerMeta(n, e.playing_next.song), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
-            title: e.now_playing.song.title,
-            artist: e.now_playing.song.artist,
-            album: e.now_playing.song.album,
+        s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.artwork), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.track), n && setPlayerMeta(n, e.next_song.track), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
+            title: e.now_playing.track,
+            artist: e.now_playing.artist,
+            album: e.now_playing.album,
             artwork: [{
-                src: e.now_playing.song.art,
+                src: e.now_playing.artwork,
                 sizes: "96x96",
                 type: "image/png"
             }, {
-                src: e.now_playing.song.art,
+                src: e.now_playing.artwork,
                 sizes: "128x128",
                 type: "image/png"
             }, {
-                src: e.now_playing.song.art,
+                src: e.now_playing.artwork,
                 sizes: "192x192",
                 type: "image/png"
             }, {
-                src: e.now_playing.song.art,
+                src: e.now_playing.artwork,
                 sizes: "256x256",
                 type: "image/png"
             }]
