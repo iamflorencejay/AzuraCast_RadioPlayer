@@ -75,7 +75,7 @@ function playerInit() {
             a = $$("playerHistory"),
             o = $(".song-now", player),
             n = $(".song-next", player),
-            l = e.now_playing.remaining,
+            l = e.now_playing.duration,
             s = $(".player-poster");
         s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.artwork), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.track), n && setPlayerMeta(n, e.next_song.track), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
             title: e.now_playing.track,
