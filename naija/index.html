@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='es' prefix='og: http://ogp.me/ns#' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+   <head>
+      <meta charset='UTF-8' />
+      <meta content='width=device-width,initial-scale=1' name='viewport' />
+      <title>
+         Box Radio Player
+      </title>
+      <style id='page-skin-1' type='text/css'>
+         <!--
+            :root {
+            --primary: #2196f3;
+            --bg-main: #101010;
+            --bg-dark: #000000;
+            --bg-black: #010101;
+            --bg-inset: #2b2b2b;
+            --color-title: #ffffff;
+            --color-text: #c4c4c4;
+            --color-inverse: #101010;
+            --btn-color: #ffffff;
+            --btn-bg: rgb(255 255 255 / 10%);
+            --btn-bg-hover: rgba(245, 245, 245, 0.2);
+            --btn-padding: .75rem 1rem;
+            --font-secondary: "Roboto", arial, sans-serif;
+            --social-size: 20px;
+            --cover-blur: 10px;
+            --shadow-s: 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.2);
+            --shadow-m: 0px 2px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12), 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+            --shadow-l: 0px 8px 17px 2px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12), 0px 5px 5px -3px rgba(0,0,0,0.2) ;
+            }
+            
+            -->
+      </style>
+      	<link href="https://icdn.streamafrica.net/boxplayer.css" rel="stylesheet" type="text/css">
+
+   </head>
+   <body class='color-text fs-6'>
+      <div class='player has-bg-cover mask color-title'>
+         <img alt='cover-bg' class='player-poster fixed object-cover events-none' height='1000' src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' width='1000' />
+         <div class='bigPlayer song-now flex flex-column relative z-50 section' id='header'>
+            <div class='bg-black p-2 flex justify-center'>
+               <a href='https://boxradio.net/'><img alt='Box Radio Player' class='header-logo' height='258' src='https://i.ibb.co/MR1chnM/logoooo.png' width='1600' /></a>
+            </div>
+            <div class='flex-1 p-2 flex items-center justify-center'>
+               <div class='big-cover-mobile flex l:flex-row flex-column items-center justify-center g-2'>
+                  <div class='song-now player-meta flex-1 o-hidden relative l:text-right'>
+                     <span class='song-status uppercase fs-8 fw-700 px-.5 py-.25 mb-.75 inline-block'>now playing</span>
+                     <h3 class='song-title fw-700 nowrap fs-4 absolute l-0 s:fs-3 mb-.75'>Loading title...</h3>
+                     <div class='song-artist fs-7 mt-2 artist-next opacity-.75 mb-.25 s:mt-3'>Loading Artist...</div>
+                     <div class='song-album fs-7 opacity-.75'>Loading album...</div>
+                  </div>
+                  <img alt='cover-01' class='song-cover big-cover bg-dark shadow-l events-none' height='400' oncontextmenu='return false;' src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' width='400' />
+                  <div class='song-next player-meta flex-1 o-hidden relative'>
+                     <span class='song-status uppercase fs-8 fw-700 px-.5 py-.25 mb-.75 inline-block'>next song</span>
+                     <h3 class='song-title fw-700 nowrap fs-4 absolute l-0 s:fs-3 mb-.75'>Loading title...</h3>
+                     <div class='song-artist fs-7 mt-2 artist-next opacity-.75 mb-.25 s:mt-3'>Loading artist...</div>
+                     <div class='song-album fs-7 opacity-.75'>CLoading album...</div>
+                  </div>
+               </div>
+            </div>
+            <div class='player-audio bg-black p-2 flex justify-center g-2 items-center relative' data-src='https://boxradio-edge-00.streamafrica.net/lofi'>
+               <div class='flex flex-wrap justify-center text-center g-.75 | gt:flex gt:rounded-pill gt:p-1'>
+                  <a aria-label='facebook' class='social social-facebook' href='https://facebook.com/boxradioapp' rel='nofollow' target='_blank'>
+                  <i class='fa-brands fa-facebook'></i>
+                  </a>
+               </div>
+               <div class='relative z-10'>
+                  <button class='player-toggle rounded-pill shadow-m play relative i-xxl p-1.25'>
+                     <svg class='i i-play' viewbox='0 0 24 24'>
+                        <path d='m7 3 14 9-14 9z'></path>
+                     </svg>
+                  </button>
+               </div>
+               <div class='player-volume-toggle relative none s:block'>
+                  <button class='btn rounded-pill player-volume-toggle-btn'><i class='fa-solid fa-volume-high'></i></button>
+                  <div class='volume-vertical p-1 bg-inset shadow-m rounded-.5'>
+                     <input class='player-volume rounded-pill cursor-pointer' max='100' min='0' type='range' value='100' />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <link as='style' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css' onload='this.onload=null;this.rel=&#39;stylesheet&#39;' rel='preload' />
+      <noscript>
+         <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css' rel='stylesheet'/>
+      </noscript>
+      <script src='https://cdn.jsdelivr.net/gh/lokesh/color-thief@2/dist/color-thief.umd.js'></script>
+      <script defer='' src='api.js?he33333llo'></script>
+      <script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/1997315711-widgets.js"></script>
+   </body>
+</html>
