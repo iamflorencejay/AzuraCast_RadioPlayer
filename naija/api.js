@@ -67,7 +67,7 @@ if (audioPlayer && audioPlayer.dataset.src) {
         e.paused ? setPlayStatus() : setPauseStatus()
     }), !1)
 }
-const boxplay = "https://exclusive.streamafrica.net/api/nowplaying_static/naija.json";
+const boxplay = "https://api.streamafrica.net/nowplaying/new.php?id=51";
 
 function playerInit() {
     fetch(boxplay).then((e => e.json())).then((e => {
