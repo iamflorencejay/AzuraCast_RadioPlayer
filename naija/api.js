@@ -67,7 +67,7 @@ if (audioPlayer && audioPlayer.dataset.src) {
         e.paused ? setPlayStatus() : setPauseStatus()
     }), !1)
 }
-const boxplay = "https://api.streamafrica.net/nowplaying/new.php?id=naija";
+const boxplay = "https://api.streamafrica.net/nowplaying/new.php?id=lofi";
 
 function playerInit() {
     fetch(boxplay).then((e => e.json())).then((e => {
