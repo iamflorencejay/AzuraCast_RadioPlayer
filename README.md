@@ -3,7 +3,7 @@ A simple player that works with the azuracast api
 
 #config
 
-Just change
+Just change this with your azuracast station now playing api.
 
 const boxplay = "https://np.streamafrica.net/api/nowplaying_static/lofi.json";
 
