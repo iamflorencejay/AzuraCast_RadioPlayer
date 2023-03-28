@@ -67,7 +67,7 @@ if (audioPlayer && audioPlayer.dataset.src) {
         e.paused ? setPlayStatus() : setPauseStatus()
     }), !1)
 }
-const boxplay = "https://np.streamafrica.net/api/nowplaying_static/lofi.json";
+const boxplay = "https://talktalk.florencejaymunar.com/api/nowplaying_static/main.json";
 
 function playerInit() {
     fetch(boxplay).then((e => e.json())).then((e => {
