@@ -98,7 +98,7 @@ function playerInit() {
                 sizes: "256x256",
                 type: "image/png"
             }]
-        })), setTimeout(playerInit, 1e3 * l)
+        })), setTimeout(playerInit, 1e3 * 7)
     })).catch((e => console.log(e)))
 }
 playerInit();
