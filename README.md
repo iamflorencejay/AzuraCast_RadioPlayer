@@ -1,7 +1,7 @@
 # RR TalkTalk RadioPlayer
 A simple player that works with the azuracast api
 
-#config
+# Config
 
 Just change this with your azuracast station now playing api.
 
