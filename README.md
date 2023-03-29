@@ -1,4 +1,4 @@
-# AzuraCast_RadioPlayer
+# RR TalkTalk RadioPlayer
 A simple player that works with the azuracast api
 
 #config
