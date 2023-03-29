@@ -577,8 +577,8 @@ a {
 }
 
 .song-status {
-    background-color: #fff;
-    color: var(--color-inverse)
+    background-color: #AA1945;
+    color: #fff;
 }
 
 .song-title {
