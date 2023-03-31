@@ -82,7 +82,7 @@ function playerInit() {
             olv = $(".live-is_live", player);
             liv = $(".live-streamer_name", player);
 
-        s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.song.art), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.song), n && setPlayerMeta(n, e.playing_next.song), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
+        s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.song.art), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.song), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
             title: e.now_playing.song.title,
             artist: e.now_playing.song.artist,
             album: e.now_playing.song.album,
@@ -106,9 +106,12 @@ function playerInit() {
         })), setTimeout(playerInit, 1e2 * l)
 
         if (e.live.is_live == true) {
-            document.getElementById("radio-status").innerHTML = "LIVE:" + " " + e.live.streamer_name;
+            document.getElementById("radio-status").innerHTML = "LIVE ON RR TALKTALK:" + " " + e.live.streamer_name;
+            document.getElementsById("next-song").style.display = "none";
+            
         } else {
         document.getElementById("radio-status").innerHTML = "radio offline, on autodj mode";
+        n && setPlayerMeta(n, e.playing_next.song);
         }
     })).catch((e => console.log(e)))
 }
