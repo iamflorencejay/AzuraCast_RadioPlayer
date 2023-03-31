@@ -107,7 +107,7 @@ function playerInit() {
 
         if (e.live.is_live == true) {
             document.getElementById("radio-status").innerHTML = "LIVE ON RR TALKTALK:" + " " + e.live.streamer_name;
-            document.getElementsById("next-song").style.display = "none";
+            document.getElementById("next-song-display").style.display = "none";
             
         } else {
         document.getElementById("radio-status").innerHTML = "radio offline, on autodj mode";
