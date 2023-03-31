@@ -18,7 +18,9 @@ function setPlayerMeta(e, t) {
         o = $(".song-title", e),
         n = $(".song-artist", e),
         l = $(".song-album", e);
-    a && (a.src = t.art), o && (o.innerText = t.title), n && (n.innerText = t.artist), l && (l.innerText = t.album)
+        ol = $(".live-is_live", e);
+        li = $(".live-streamer_name", e);
+    a && (a.src = t.art), o && (o.innerText = t.title), n && (n.innerText = t.artist), l && (l.innerText = t.album), li && (li.innerText = t.streamer_name), ol && (ol.innerText = t.streamer_name)
 }
 
 function setScrollText() {
@@ -77,6 +79,9 @@ function playerInit() {
             n = $(".song-next", player),
             l = e.now_playing.remaining,
             s = $(".player-poster");
+            olv = $(".live-is_live", player);
+            liv = $(".live-streamer_name", player);
+
         s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.song.art), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.song), n && setPlayerMeta(n, e.playing_next.song), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
             title: e.now_playing.song.title,
             artist: e.now_playing.song.artist,
@@ -98,7 +103,13 @@ function playerInit() {
                 sizes: "256x256",
                 type: "image/png"
             }]
-        })), setTimeout(playerInit, 1e3 * l)
+        })), setTimeout(playerInit, 1e2 * l)
+
+        if (e.live.is_live == true) {
+            document.getElementById("radio-status").innerHTML = "LIVE:" + " " + e.live.streamer_name;
+        } else {
+        document.getElementById("radio-status").innerHTML = "radio offline, on autodj mode";
+        }
     })).catch((e => console.log(e)))
 }
 playerInit();
