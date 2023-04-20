@@ -822,6 +822,10 @@ a {
       float: right;
       display: block;
     }
+
+    body {
+        overflow-y: hidden;
+    }
   }
   
   @media screen and (max-width: 600px) {
