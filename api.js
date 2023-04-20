@@ -108,7 +108,6 @@ function playerInit() {
 
         if (e.live.is_live == true) {
             document.getElementById("radio-status").innerHTML = "LIVE:" + " " + e.live.streamer_name;
-            document.getElementById("next-song-display").style.display = "none";
             document.getElementById("live-streamer-art").src = e.live.art;
             
         } else {
