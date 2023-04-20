@@ -767,12 +767,14 @@ a {
 }
 
 .header-logo {
-    max-width: 400px
+    max-width: 400px;
+    height: 100;
 }
 
 @media (max-width: 600px) {
     .header-logo {
-        max-width: 200px
+        max-width: 400px;
+        height: 100;
     }
 }
 
@@ -814,9 +816,4 @@ a {
       display: block;
       text-align: left;
     }
-  }
-
-  .scroll {
-    min-height:100%;
-    overflow:scroll; 
   }
