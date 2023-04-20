@@ -103,7 +103,7 @@ function playerInit() {
                 sizes: "256x256",
                 type: "image/png"
             }]
-        })), setTimeout(playerInit, 1e2 * l)
+        })), setTimeout(playerInit, 1e1 * 5)
 
         if (e.live.is_live == true) {
             document.getElementById("radio-status").innerHTML = "LIVE ON RR TALKTALK:" + " " + e.live.streamer_name;

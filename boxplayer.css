@@ -713,6 +713,18 @@ a {
     pointer-events: none
 }
 
+.embed-cover {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+#titleEmbed {
+    float: left;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
 .inline-block {
     display: inline-block
 }
@@ -726,6 +738,7 @@ a {
         width: 100%;
         text-align: center
     }
+
 }
 
 @media(max-width:575px) {
@@ -776,7 +789,6 @@ a {
         bottom: 0;
         min-height: 100%;
         width: 100%;
-        overflow-x: hidden;
     }
 }
 
