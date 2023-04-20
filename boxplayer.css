@@ -131,10 +131,21 @@ svg {
 .mb-1 {
     margin-bottom: 1rem
 }
-
 .gt\:p-1>*,
 .p-1 {
     padding: 1rem
+}
+
+.p-\.25 {
+    padding: .25rem
+}
+
+.p-\.5 {
+    padding: .5rem
+}
+
+.p-\.75 {
+    padding: .75rem
 }
 
 .p-1\.25 {
@@ -771,10 +782,19 @@ a {
     height: 100;
 }
 
+#logoRadio {
+    padding: 2rem;
+}
+
 @media (max-width: 600px) {
     .header-logo {
         max-width: 400px;
         height: 100;
+        width: 1600;
+    }
+
+    #logoRadio {
+        padding : 0.25rem;
     }
 }
 
