@@ -81,6 +81,7 @@ function playerInit() {
             s = $(".player-poster");
             olv = $(".live-is_live", player);
             liv = $(".live-streamer_name", player);
+            art = $(".live-art", player);
 
         s && s.src && (s.crossOrigin = "Anonymous", s.src = "https://images.weserv.nl/?url=" + encodeURIComponent(e.now_playing.song.art), setAccentColor(document.body, s)), o && setPlayerMeta(o, e.now_playing.song), a && (a.innerHTML = createHistory(t, a.dataset.results || 5)), setScrollText(), "mediaSession" in navigator && (navigator.mediaSession.metadata = new MediaMetadata({
             title: e.now_playing.song.title,
@@ -106,8 +107,9 @@ function playerInit() {
         })), setTimeout(playerInit, 1e1 * 5)
 
         if (e.live.is_live == true) {
-            document.getElementById("radio-status").innerHTML = "LIVE ON RR TALKTALK:" + " " + e.live.streamer_name;
+            document.getElementById("radio-status").innerHTML = "LIVE:" + " " + e.live.streamer_name;
             document.getElementById("next-song-display").style.display = "none";
+            document.getElementById("live-streamer-art").src = e.live.art;
             
         } else {
         document.getElementById("radio-status").innerHTML = "radio offline, on autodj mode";

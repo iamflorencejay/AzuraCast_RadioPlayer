@@ -717,6 +717,18 @@ a {
     pointer-events: none
 }
 
+.live-broadcaster {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+#radio-status {
+    float: left;
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+}
+
 .embed-cover {
     width: 150px;
     height: 150px;
