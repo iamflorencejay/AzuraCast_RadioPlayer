@@ -737,7 +737,19 @@ a {
         background-color: rgb(0 0 0/50%)
     }
 
-    .bigPlayer {
+    .bigPlayer-fixed{
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        width: 100%
+    }
+
+    .bigPlayer{
+        position: fixed;
         height: 100%;
         top: 0;
         left: 0;
@@ -790,4 +802,9 @@ a {
       display: block;
       text-align: left;
     }
+  }
+
+  .scroll {
+    min-height:100%;
+    overflow:scroll; 
   }
