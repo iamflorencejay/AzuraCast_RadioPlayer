@@ -470,7 +470,7 @@ a {
 }
 
 .song-now .song-cover:not(.big-cover) {
-    animation: rotate 10s infinite linear;
+    animation: rotate 30s infinite linear;
     animation-play-state: var(--play-state, paused)
 } 
 
