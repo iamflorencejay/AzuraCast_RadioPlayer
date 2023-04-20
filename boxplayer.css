@@ -277,7 +277,6 @@ body {
     font-family: var(--font-secondary);
     min-height: 100%;
     background-color: var(--bg-main);
-    overflow-x: hidden;
     line-height: 1.5;
     background-size: cover;
     word-break: break-word
