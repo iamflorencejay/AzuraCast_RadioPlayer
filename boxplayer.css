@@ -6,7 +6,6 @@
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    overflow-y: scroll;
 }
 
 body {
@@ -280,7 +279,7 @@ body {
     background-color: var(--bg-main);
     line-height: 1.5;
     background-size: cover;
-    word-break: break-word
+    word-break: break-word;
 }
 
 a {
@@ -739,7 +738,6 @@ a {
     }
 
     .bigPlayer {
-        position: fixed;
         height: 100%;
         top: 0;
         left: 0;
