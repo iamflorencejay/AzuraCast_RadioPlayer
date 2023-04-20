@@ -573,6 +573,13 @@ a {
     min-height: 100vh
 }
 
+.bigPlayerFixed {
+    --volume-size: 14px;
+    --volume-width: 120px;
+    min-height: 100vh
+}
+
+
 .big-history .history-image {
     width: 80px;
     height: 80px;
@@ -737,7 +744,8 @@ a {
         background-color: rgb(0 0 0/50%)
     }
 
-    .bigPlayer-fixed{
+    .bigPlayerFixed {
+        position: fixed;
         height: 100%;
         top: 0;
         left: 0;
@@ -748,7 +756,6 @@ a {
     }
 
     .bigPlayer{
-        position: fixed;
         height: 100%;
         top: 0;
         left: 0;
@@ -761,6 +768,12 @@ a {
 
 .header-logo {
     max-width: 400px
+}
+
+@media (max-width: 600px) {
+    .header-logo {
+        max-width: 200px
+    }
 }
 
 /* Style the links inside the navigation bar */
