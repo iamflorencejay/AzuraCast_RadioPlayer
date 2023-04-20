@@ -5,7 +5,8 @@
 
 html {
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    overflow-y: scroll;
 }
 
 body {
@@ -769,7 +770,7 @@ a {
   /* Hide the link that should open and close the topnav on small screens */
     .topnav .icon {
     display: none;
-}
+    }
 
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
