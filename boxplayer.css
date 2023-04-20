@@ -171,6 +171,10 @@ svg {
     border-radius: .5rem
 }
 
+.disc {
+    border-radius: 5rem;
+}
+
 .gt\:rounded-pill>*,
 .rounded-pill {
     border-radius: 9999px
