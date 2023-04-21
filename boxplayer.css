@@ -929,3 +929,11 @@ a {
     margin-top: 0.5rem;
     text-align: left;
 }
+
+@media (max-width: 320px) {
+
+    #radio-status {
+        font-size: 0.9rem;
+    }
+    
+}
