@@ -32,15 +32,6 @@ function setScrollText() {
     }))
 }
 
-function setScrollForEmbed() {
-    document.querySelectorAll(".embed-meta").forEach((e => {
-        var t = $(".song-title", e),
-            i = t.offsetWidth,
-            d = e.offsetWidth;
-        e.setAttribute("style", "--title-width:" + d + "px"), i > d ? t.classList.add("embed-very-long") : t.classList.remove("embed-very-long")
-    }))
-}
-
 
 function setVolumeIcon(e) {
     e < 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-off"></i>' : e < 60 && e > 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-low"></i>' : e > 60 && (controlVolume.innerHTML = '<i class="fa-solid fa-volume-high"></i>')
