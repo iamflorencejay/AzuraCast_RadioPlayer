@@ -746,6 +746,10 @@ a {
     margin-top: 0.8rem;
 }
 
+#wip {
+    font-size: 10rem;
+}
+
 .embed-cover {
     width: 150px;
     height: 150px;
@@ -773,6 +777,11 @@ a {
         width: auto;
         top: 50%;
         transform: translateY(-50%)
+    }
+
+    #wip {
+        font-size: 5rem;
+        text-align: center;
     }
 
 }
@@ -878,6 +887,11 @@ a {
       float: right;
       display: block;
     }
+
+    #wip {
+        font-size: 3rem;
+        text-align: center;
+    }
     
   }
   
@@ -936,4 +950,8 @@ a {
         font-size: 0.9rem;
     }
     
+    #wip {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
