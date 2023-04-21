@@ -32,6 +32,16 @@ function setScrollText() {
     }))
 }
 
+function setScrollForEmbed() {
+    document.querySelectorAll(".embed-meta").forEach((e => {
+        var t = $(".song-title", e),
+            a = t.offsetWidth,
+            o = e.offsetWidth;
+        e.setAttribute("style", "--title-width:" + o + "px"), a > o ? t.classList.add("song-very-long") : t.classList.remove("song-very-long")
+    }))
+}
+
+
 function setVolumeIcon(e) {
     e < 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-off"></i>' : e < 60 && e > 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-low"></i>' : e > 60 && (controlVolume.innerHTML = '<i class="fa-solid fa-volume-high"></i>')
 }
@@ -114,6 +124,8 @@ function playerInit() {
         document.getElementById("radio-status").innerHTML = "radio offline, on autodj mode";
         n && setPlayerMeta(n, e.playing_next.song);
         }
+
+        
     })).catch((e => console.log(e)))
 }
 playerInit();

@@ -735,12 +735,6 @@ a {
     float: left;
 }
 
-#titleEmbed {
-    float: left;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-}
-
 .inline-block {
     display: inline-block
 }
@@ -753,6 +747,15 @@ a {
     .player-meta {
         width: 100%;
         text-align: center
+    }
+
+    .song-now.embed-meta {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        width: auto;
+        top: 50%;
+        transform: translateY(-50%)
     }
 
 }
@@ -903,3 +906,52 @@ a {
     0% { left: 0; }
     100% { left: -100%; }
   }
+
+  #textEmbed {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+/* Added Very Long Tab for Player Embed */
+
+@media(max-width:991px) {
+    .embed-meta {
+        width: 100%;
+        text-align: center
+    }
+
+    .embed-cover {
+        margin-right: 11rem;
+    }
+
+    #textEmbed {
+        margin-left: 23rem;
+        margin-top: -22.5rem;
+        text-align: left;
+
+    }
+}
+
+@media(max-width:575px) {
+
+    .song-now.embed-meta {
+        margin-left: 10.5rem;
+        margin-top: 0.7rem;
+        transform: translateY(-50%);
+        text-align: left;
+    }
+
+    #textEmbed {
+        margin-left: 2rem;
+        margin-top: 0rem;
+    }
+}
+
+@media(max-width:375px) {
+
+    #textEmbed {
+        margin-left: 0.3rem;
+        margin-top: 0rem;
+    }
+}
+/* End */
