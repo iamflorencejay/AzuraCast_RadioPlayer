@@ -35,9 +35,9 @@ function setScrollText() {
 function setScrollForEmbed() {
     document.querySelectorAll(".embed-meta").forEach((e => {
         var t = $(".song-title", e),
-            a = t.offsetWidth,
-            o = e.offsetWidth;
-        e.setAttribute("style", "--title-width:" + o + "px"), a > o ? t.classList.add("song-very-long") : t.classList.remove("song-very-long")
+            i = t.offsetWidth,
+            d = e.offsetWidth;
+        e.setAttribute("style", "--title-width:" + d + "px"), i > d ? t.classList.add("embed-very-long") : t.classList.remove("embed-very-long")
     }))
 }
 

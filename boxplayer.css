@@ -670,6 +670,23 @@ a {
     animation: textMarquee 14s infinite linear
 }
 
+.embed-very-long {
+    animation: embedMarquee 14s infinite linear
+}
+
+@keyframes embedMarquee {
+
+    25%,
+    from {
+        transform: translateX(0)
+    }
+
+    50%,
+    75% {
+        transform: translateX(calc(-100% + var(--title-width)))
+    }
+}
+
 .history-item:hover:before {
     opacity: 1
 }
