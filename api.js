@@ -108,7 +108,7 @@ function playerInit() {
 
         if (e.live.is_live == true) {
             document.getElementById("radio-status").innerHTML = "LIVE:" + " " + e.live.streamer_name;
-            document.getElementById("live-streamer-art").src = e.live.art;
+            document.getElementById("live-broadcaster").src = e.live.art;
             
         } else {
         document.getElementById("radio-status").innerHTML = "all djs are offline at the moment, on autodj mode";
