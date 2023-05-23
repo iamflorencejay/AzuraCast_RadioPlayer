@@ -830,6 +830,7 @@ a {
 }
 
 .header-logo {
+    max-width: 400px;
 }
 
 #logoRadio {
@@ -838,6 +839,7 @@ a {
 
 @media (max-width: 600px) {
     .header-logo {
+        max-width: 200px;
     }
 
     #logoRadio {
