@@ -33,6 +33,7 @@ function setScrollText() {
 }
 
 
+
 function setVolumeIcon(e) {
     e < 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-off"></i>' : e < 60 && e > 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-low"></i>' : e > 60 && (controlVolume.innerHTML = '<i class="fa-solid fa-volume-high"></i>')
 }
