@@ -723,15 +723,13 @@ a {
     width: 75px;
     height: 75px;
     display: block;
-    align-content: center;
     float: none;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #radio-status {
     float: left;
-    margin-left: 1rem;
     margin-top: 0.8rem;
 }
 
