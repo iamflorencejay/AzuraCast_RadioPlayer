@@ -719,10 +719,14 @@ a {
     pointer-events: none
 }
 
-.live-broadcaster {
-    width: 50px;
-    height: 50px;
-    float: left;
+#live-broadcaster {
+    width: 75px;
+    height: 75px;
+    display: block;
+    align-content: center;
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 #radio-status {
@@ -939,4 +943,9 @@ a {
         font-size: 2rem;
         text-align: center;
     }
+}
+
+#live-streamer-art {
+    display: block;
+    margin: 0 auto;
 }
