@@ -32,17 +32,6 @@ function setScrollText() {
     }))
 }
 
-function setScrollTextForLive() {
-    document.querySelectorAll("#radio-status").forEach((e => {
-        var t = $("#radio-status", e),
-            a = t.offsetWidth,
-            o = e.offsetWidth;
-        e.setAttribute("style", "--title-width:" + o + "px"), a > o ? t.classList.add("song-very-long") : t.classList.remove("song-very-long")
-    }))
-}
-
-
-
 function setVolumeIcon(e) {
     e < 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-off"></i>' : e < 60 && e > 10 ? controlVolume.innerHTML = '<i class="fa-solid fa-volume-low"></i>' : e > 60 && (controlVolume.innerHTML = '<i class="fa-solid fa-volume-high"></i>')
 }
@@ -115,7 +104,7 @@ function playerInit() {
                 sizes: "256x256",
                 type: "image/png"
             }]
-        })), setTimeout(playerInit, 1e1 * 5)
+        })), setTimeout(playerInit, 1e3 * 2)
 
         if (e.live.is_live == true) {
             document.getElementById("radio-status").innerHTML = "LIVE:" + " " + e.live.streamer_name;
