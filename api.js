@@ -32,6 +32,15 @@ function setScrollText() {
     }))
 }
 
+function setScrollTextForLive() {
+    document.querySelectorAll("#radio-status").forEach((e => {
+        var t = $("#radio-status", e),
+            a = t.offsetWidth,
+            o = e.offsetWidth;
+        e.setAttribute("style", "--title-width:" + o + "px"), a > o ? t.classList.add("song-very-long") : t.classList.remove("song-very-long")
+    }))
+}
+
 
 
 function setVolumeIcon(e) {
