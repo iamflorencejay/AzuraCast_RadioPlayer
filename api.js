@@ -122,7 +122,7 @@ function playerInit() {
             document.getElementById("live-streamer-art").src = e.live.art;
             
         } else {
-        document.getElementById("radio-status").innerHTML = "radio offline, on autodj mode";
+        document.getElementById("radio-status").innerHTML = "all djs are offline at the moment, on autodj mode";
         n && setPlayerMeta(n, e.playing_next.song);
         }
 
